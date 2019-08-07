@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/nav_header"
+              android:layout_width="match_parent"
+              android:layout_height="160dp"
+              android:background="@color/colorAccent"
+              android:clickable="true"
+              android:focusable="true"
+              android:foreground="?attr/selectableItemBackgroundBorderless"
+              android:gravity="bottom"
+              android:orientation="vertical"
+              android:padding="16dp"
+              android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+            android:id="@+id/iv_nav_header"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@mipmap/ic_launcher"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Santanu Banik"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorWhite"/>
+    <TextView
+            android:id="@+id/tv_nav_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="santanu.banik1996@gmail.com"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+</LinearLayout>

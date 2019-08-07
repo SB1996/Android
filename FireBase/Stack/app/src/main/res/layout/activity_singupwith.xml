@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.SingupwithActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="-37dp"
+    />
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_rigth"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="10dp"
+    />
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_top"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="10dp"
+    />
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_bottom"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="10dp"
+    />
+    <TextView
+            android:id="@+id/tv_title"
+            android:text="Sing Up with social account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="20sp"
+            android:textColor="#ab72c0"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+    />
+
+    <TextView
+            android:id="@+id/tv_subtitle"
+            android:text="Select your account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="12sp"
+            android:textColor="#cba1d2"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+    />
+    <ImageView
+            android:id="@+id/iv_logo"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintTop_toTopOf="@+id/guideline_top"
+            app:layout_constraintHorizontal_bias="0.498"
+    />
+
+
+    <Button
+            android:id="@+id/btn_facebook"
+            android:text="Login with facebook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_facebook_background"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="60dp"
+            android:drawableStart="@drawable/ic_facebook_logo"
+            android:paddingStart="40dp"
+            android:paddingEnd="0dp"
+            android:drawablePadding="-40dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
+            app:layout_constraintHorizontal_bias="1.0"/>
+
+
+    <Button
+            android:id="@+id/btn_google"
+            android:text="Login with Google"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_google_logo"
+            android:background="@drawable/btn_google_background"
+            android:paddingStart="40dp"
+            android:paddingEnd="0dp"
+            android:drawablePadding="-40dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintTop_toBottomOf="@+id/btn_facebook"
+            app:layout_constraintHorizontal_bias="1.0"/>
+
+    <Button
+            android:id="@+id/btn_email"
+            android:text="I'll used Email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_email_logo"
+            android:background="@drawable/btn_email_background"
+            android:paddingStart="40dp"
+            android:paddingEnd="0dp"
+            android:drawablePadding="-40dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintTop_toBottomOf="@+id/btn_google"
+            app:layout_constraintHorizontal_bias="1.0"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="1.0" >
+
+        <view android:layout_width="130dp"
+              android:layout_height="1dp"
+              android:paddingTop="10dp"
+              android:layout_marginEnd="20dp"
+              android:layout_gravity="center_vertical"
+              android:background="@color/LigthBlue"
+              class="android.widget.TextView">
+
+        </view>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical"
+                  android:text="OR"
+        />
+        <view android:layout_width="130dp"
+              android:layout_height="1dp"
+              android:paddingTop="10dp"
+              android:layout_marginStart="20dp"
+              android:layout_gravity="center_vertical"
+              android:background="@color/LigthBlue"
+              class="android.widget.TextView">
+
+        </view>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/backlinearLayoutr"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            android:id="@+id/sociallinearLayout">
+
+
+        <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_twitter_background"
+                android:src="@drawable/ic_twitter_white"/>
+
+        <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_instagram_background"
+                android:src="@drawable/ic_instagram_white"/>
+
+        <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/btn_whatapps_background"
+                android:src="@drawable/ic_whatsapp_white"/>
+    </LinearLayout>
+    <TextView
+            android:id="@+id/textView2"
+            android:text="another option for Login with"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/LigthBlue"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintBottom_toTopOf="@+id/sociallinearLayout"
+    />
+    <LinearLayout
+            android:id="@+id/backlinearLayoutr"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="30dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_rigth"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left">
+
+        <TextView
+                android:id="@+id/tv_back_login_msg"
+                android:text="already have an account "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_back_login"
+        />
+
+        <TextView
+                android:id="@+id/tv_back_login"
+                android:text=" go back to Login page."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/LigthBlue"
+        />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

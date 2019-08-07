@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Intent Filters</string>
+    <string name="send_mail">Send Mail</string>
+</resources>

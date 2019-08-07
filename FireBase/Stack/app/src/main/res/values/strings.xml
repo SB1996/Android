@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Stack</string>
+
+
+    <!--Facebook-->
+    <string name="facebook_app_id">561744084357370</string>
+    <string name="fb_login_protocol_scheme">fb561744084357370</string>
+
+
+</resources>
