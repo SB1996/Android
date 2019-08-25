@@ -3,17 +3,42 @@ package com.example.userdata.database
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.provider.BaseColumns
+import android.util.Log
 
-class DatabaseInfo(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
-    override fun onCreate(p0: SQLiteDatabase?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+class Database(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+
+    private val TAG: String = Database::class.java.simpleName
+    companion object{
+        private val DATABASE_VERSION = 1
+        private val DATABASE_NAME = "userdata"
+    }
+    inner class SQLiquery{
+         val SQL_CREATE_ENTRIES =
+            "CREATE TABLE ${DatabaseInfo.FeedEntry.TABLE_NAME} (" +
+                         "${BaseColumns._ID} INTEGER PRIMARY KEY," +
+                         "${DatabaseInfo.FeedEntry.COLUMN_NAME} TEXT," +
+                         "${DatabaseInfo.FeedEntry.COLUMN_USERNAME} TEXT," +
+                         "${DatabaseInfo.FeedEntry.COLUMN_EMAIL} TEXT," +
+                         "${DatabaseInfo.FeedEntry.COLUMN_PASSWORD} TEXT" +
+            ")"
+
+        private val SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS ${DatabaseInfo.FeedEntry.TABLE_NAME}"
     }
 
-    override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onCreate(db: SQLiteDatabase?) {
+        Log.d(TAG, "onCreate: onCreated() called")
+        db!!.execSQL(SQLitequery.SQL_CREATE_ENTRIES)
     }
 
-    override fun onDowngrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        super.onDowngrade(db, oldVersion, newVersion)
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        Log.d(TAG, "onUpgrade: onUpgrade() called")
+        db.execSQL(SQLitequery.SQL_DELETE_ENTRIES)
+        onCreate(db)
+    }
+
+    override fun onDowngrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        Log.d(TAG, "onDowngrade: onDowngrade() called")
+        onUpgrade(db, oldVersion, newVersion)
     }
 }

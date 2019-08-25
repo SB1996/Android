@@ -26,7 +26,6 @@ open class ContactUserData() {
 
 
     }
-
     constructor(_contactId:String?, _name: String, _email: String, _profileImg: String, _contactNumber: Long?) : this() {
         this.contactId = _contactId
         this.name = _name

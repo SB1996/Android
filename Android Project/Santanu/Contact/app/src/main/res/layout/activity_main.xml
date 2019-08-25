@@ -10,8 +10,46 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/header_constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             tools:ignore="MissingConstraints" >
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintGuide_begin="10dp"
+                android:id="@+id/guideline_Left"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintGuide_end="10dp"
+                android:id="@+id/guideline_Right"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintGuide_begin="10dp"
+                android:id="@+id/guideline_Top"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintGuide_end="10dp"
+                android:id="@+id/guideline_Buttom"/>
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+        />
+
+        <EditText android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintEnd_toStartOf="@+id/guideline_Right" android:layout_marginEnd="8dp"
+                  app:layout_constraintStart_toStartOf="@+id/guideline_Left" android:layout_marginStart="8dp"
+                  app:layout_constraintBottom_toTopOf="@+id/guideline_Buttom" android:layout_marginBottom="8dp"
+                  android:drawableEnd="@drawable/ic_search"
+                  android:paddingStart="20dp"
+                  android:paddingEnd="20dp"
+                  android:drawablePadding="20dp"
+        />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -19,6 +57,8 @@
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
