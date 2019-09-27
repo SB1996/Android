@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var passwordTV: EditText
     private lateinit var fatahTV: EditText
     private lateinit var statusTV: TextView
+    private lateinit var clearTV: TextView
 
     private lateinit var insertBTN: Button
     private lateinit var updateBTN: Button
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         passwordTV = findViewById(R.id.et_password) as EditText
         fatahTV = findViewById(R.id.et_fatch_rc) as EditText
         statusTV = findViewById(R.id.tv_status) as TextView
+        clearTV = findViewById(R.id.tv_clear) as TextView
 
         insertBTN = findViewById(R.id.btn_insert) as Button
         updateBTN = findViewById(R.id.btn_update) as Button
@@ -102,7 +104,12 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "onCreate: VIEW RECORD Button Clicked")
             val db = dbHelper!!.readableDatabase
 
-            val needColumns = arrayOf(DatabaseInfo.FeedEntry.COLUMN_NAME,DatabaseInfo.FeedEntry.COLUMN_USERNAME)
+            val needColumns = arrayOf(
+                DatabaseInfo.FeedEntry.COLUMN_NAME,
+                DatabaseInfo.FeedEntry.COLUMN_USERNAME,
+                DatabaseInfo.FeedEntry.COLUMN_EMAIL,
+                DatabaseInfo.FeedEntry.COLUMN_PASSWORD
+            )
             val selection = "${DatabaseInfo.FeedEntry.COLUMN_NAME} = ?"
             val selectionArgs = arrayOf("Santanu")
             val sortOrder = "${DatabaseInfo.FeedEntry.COLUMN_NAME} DESC"
@@ -127,18 +134,30 @@ class MainActivity : AppCompatActivity() {
                 null                            // The sort order
             )
 
-            val itemIds = mutableListOf<Long>()
-            with(cursorObj) {
-                while (moveToNext()) {
-                    val itemId = getLong(getColumnIndexOrThrow(BaseColumns._ID))
-                    itemIds.add(itemId)
+            if(cursorObj != null){
+                with(cursorObj) {
+                    while (moveToNext()) {
+                        val name = getString(getColumnIndexOrThrow(DatabaseInfo.FeedEntry.COLUMN_NAME)).toString()
+                        val username = getString(getColumnIndexOrThrow(DatabaseInfo.FeedEntry.COLUMN_USERNAME)).toString()
+                        val email = getString(getColumnIndexOrThrow(DatabaseInfo.FeedEntry.COLUMN_EMAIL)).toString()
+                        val password = getString(getColumnIndexOrThrow(DatabaseInfo.FeedEntry.COLUMN_PASSWORD)).toString()
+
+                        statusTV.append("\nName : ${getString(getColumnIndexOrThrow(DatabaseInfo.FeedEntry.COLUMN_NAME)).toString()}")
+                        statusTV.append("\nUserName : ${getString(getColumnIndexOrThrow(DatabaseInfo.FeedEntry.COLUMN_USERNAME)).toString()}")
+                        statusTV.append("\nEmail : ${getString(getColumnIndexOrThrow(DatabaseInfo.FeedEntry.COLUMN_EMAIL)).toString()}")
+                        statusTV.append("\nPassword : ${getString(getColumnIndexOrThrow(DatabaseInfo.FeedEntry.COLUMN_PASSWORD)).toString()}")
+                    }
                 }
-            }
-            for (data in itemIds){
-                Log.d(TAG, "Data: ${data}")
+
             }
 
 
+        }
+
+        //Click event for VIEW RECORD Button
+        clearTV.setOnClickListener {
+            statusTV.text = ""
+            statusTV.clearComposingText()
         }
     }
     override fun onDestroy() {
