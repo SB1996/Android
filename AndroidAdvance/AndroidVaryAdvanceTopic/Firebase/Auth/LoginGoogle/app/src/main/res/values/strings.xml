@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Login Google</string>
+
+
+    <string name="android_client">968740927738-k8rq9c7hqba0e3r7mjhsgh0rtgeu3lg6.apps.googleusercontent.com</string>
+    <string name="web_client">968740927738-qadkgav70v9240j6efeubogf8s5ug5mo.apps.googleusercontent.com</string>
+
+
+    <string name="success">You aer Login Now {Login : Success}</string>
+    <string name="failed">You aer Not Login Now {Login : Not Success}</string>
+</resources>

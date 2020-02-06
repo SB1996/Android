@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PhoneAuth</string>
+
+    <string name="success">You are Login Now {Login : Authenticated}</string>
+    <string name="failed">You are Not Login Now {Login : Not Authenticate}</string>
+</resources>

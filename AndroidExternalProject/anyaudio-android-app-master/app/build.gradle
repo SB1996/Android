@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        applicationId "any.audio"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 9
+        versionName "0.5.2"
+
+    }
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+
+    lintOptions {
+        // set to true to turn off analysis progress reporting by lint
+        quiet true
+        // if true, stop the gradle build if errors are found
+        abortOnError false
+        // if true, only report errors
+        ignoreWarnings true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.sothree.slidinguppanel:library:3.3.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.facebook.fresco:fresco:1.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.github.arimorty:floatingsearchview:2.0.3'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.exoplayer:exoplayer:r1.5.3'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    implementation 'com.google.firebase:firebase-ads:18.1.1'
+    implementation 'com.google.firebase:firebase-crash:16.2.1'
+    implementation 'com.google.android.gms:play-services-ads:18.1.1'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+}
+apply plugin: 'com.google.gms.google-services'

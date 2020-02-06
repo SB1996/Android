@@ -1,0 +1,20 @@
+package com.santanu.navigation.ui.fragment
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.santanu.navigation.R
+
+class CraditFragment : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_cradit, container, false)
+    }
+
+
+}

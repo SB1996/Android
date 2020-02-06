@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BarCodeData</string>
+
+
+    <string name="code_des">Scan Code\n
+        any type of code you can scan
+    </string>
+
+
+</resources>

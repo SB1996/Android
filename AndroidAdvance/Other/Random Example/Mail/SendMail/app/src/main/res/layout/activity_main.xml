@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/pbLoginStatus"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="invisible"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_gmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pbLoginStatus" />
+
+    <TextView
+        android:id="@+id/tvMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Varification"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:drawableEnd="@drawable/ic_email"
+        android:drawablePadding="-20dp"
+        android:drawableTint="@color/colorWhiteGray"
+        android:background="@drawable/bg_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/etEmailOTP" />
+
+    <EditText
+        android:id="@+id/etEmailOTP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="50dp"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:hint="Enter OTP"
+        android:inputType="text"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:drawablePadding="-20dp"
+        android:drawableTint="@color/colorWhiteGray"
+        android:background="@drawable/bg_edittext"
+        app:layout_constraintBottom_toTopOf="@+id/btnAuth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAuth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="30dp"
+        android:text="Send Email"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:background="@drawable/bg_email_button"
+        android:drawableEnd="@drawable/ic_gmail_small"
+        android:drawablePadding="-20dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

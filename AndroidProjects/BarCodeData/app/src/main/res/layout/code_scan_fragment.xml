@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.CodeScanFragment">
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toTopOf="@+id/m_btn_take_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/m_btn_take_image"
+        android:layout_width="@dimen/dimens_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_32dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:layout_marginBottom="@dimen/dimens_8dp"
+        android:text="Take An Image"
+        android:textAllCaps="false"
+        android:drawableEnd="@drawable/ic_camera_24dp"
+        android:drawableTint="@color/colorWhite"
+        app:cornerRadius="@dimen/dimens_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

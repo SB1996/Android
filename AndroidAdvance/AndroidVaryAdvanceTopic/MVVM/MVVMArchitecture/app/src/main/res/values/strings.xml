@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MVVM Architecture</string>
+
+    <string name="login">Login</string>
+    <string name="create_new_acc">create a new once</string>
+    <string name="exist_acc">already have an account? go to login</string>
+    <string name="forgot_msg">forgot your password? reset password</string>
+    <string name="password">Password</string>
+    <string name="cpassword">Confirm Password</string>
+    <string name="username">Username</string>
+    <string name="singup">SingUp</string>
+    <string name="email">Email</string>
+    <string name="create_new_acc_msg">you don\'t have an account?</string>
+    <string name="phone">Phone</string>
+
+    <!--Facebook Data-->
+    <string name="facebook_app_id">411079886453265</string>
+    <string name="fb_login_protocol_scheme">fb411079886453265</string>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.santanu.navigation.ui.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_customerFragment"
+            app:exitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/customerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerFragment"
+        android:name="com.santanu.navigation.ui.fragment.CustomerFragment"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_customer" >
+        <action
+            android:id="@+id/action_customerFragment_to_craditFragment"
+            app:exitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/craditFragment" />
+        <argument
+            android:name="Name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue=" " />
+        <argument
+            android:name="Amount"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/craditFragment"
+        android:name="com.santanu.navigation.ui.fragment.CraditFragment"
+        android:label="fragment_cradit"
+        tools:layout="@layout/fragment_cradit" >
+        <action
+            android:id="@+id/action_craditFragment_to_verifiedFragment"
+            app:exitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/verifiedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifiedFragment"
+        android:name="com.santanu.navigation.ui.fragment.VerifiedFragment"
+        android:label="fragment_verified"
+        tools:layout="@layout/fragment_verified" >
+        <action
+            android:id="@+id/action_verifiedFragment_to_infoFragment"
+            app:exitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.santanu.navigation.ui.fragment.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_mainFragment"
+            app:exitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

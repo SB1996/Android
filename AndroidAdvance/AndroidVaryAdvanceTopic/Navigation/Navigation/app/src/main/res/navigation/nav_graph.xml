@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:ignore="UnusedNavigation"
+    app:startDestination="@id/zeroFragment">
+
+    <fragment
+        android:id="@+id/zeroFragment"
+        android:name="com.example.navigation.ui.fragment.ZeroFragment"
+        android:label="fragment_zero"
+        tools:layout="@layout/fragment_zero" >
+        <action
+            android:id="@+id/action_zeroFragment_to_oneFragment"
+            app:destination="@id/oneFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="senderName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="None" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/oneFragment"
+        android:name="com.example.navigation.ui.fragment.OneFragment"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one" >
+        <action
+            android:id="@+id/action_oneFragment_to_twoFragment"
+            app:destination="@id/twoFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <argument
+        android:name="senderName"
+        app:argType="string"
+        app:nullable="true"
+        android:defaultValue="None" />
+        <argument
+            android:name="receiverName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="None" />
+        <argument
+            android:name="amount"
+            app:argType="string"
+            android:defaultValue="None" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="com.example.navigation.ui.fragment.TwoFragment"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" >
+        <action
+            android:id="@+id/action_twoFragment_to_threeFragment"
+            app:destination="@id/threeFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+
+        <argument
+            android:name="PersonName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="None" />
+        <argument
+            android:name="SenderPersonName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="None" />
+        <argument
+            android:name="Amount"
+            app:argType="string"
+            android:defaultValue="None" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/threeFragment"
+        android:name="com.example.navigation.ui.fragment.ThreeFragment"
+        android:label="fragment_three"
+        tools:layout="@layout/fragment_three" />
+
+</navigation>

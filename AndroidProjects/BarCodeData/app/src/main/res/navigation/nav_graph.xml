@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.santanu.barcodedata.ui.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_codeScanFragment"
+            app:destination="@id/codeScanFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/codeScanFragment"
+        android:name="com.santanu.barcodedata.ui.fragment.CodeScanFragment"
+        android:label="code_scan_fragment"
+        tools:layout="@layout/code_scan_fragment" >
+        <action
+            android:id="@+id/action_codeScanFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
