@@ -77,6 +77,8 @@ class MainActivity : AppCompatActivity() {
                     Log.d(TAG, "MainActivity{} : onResponse() >> [line 77] :: Id : ${data.userId}\n")
                     Log.d(TAG, "MainActivity{} : onResponse() >> [line 78] :: Id : ${data.title}\n")
                     Log.d(TAG, "MainActivity{} : onResponse() >> [line 79] :: Id : ${data.text}\n\n")
+
+
                 }
 
             }
